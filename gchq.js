@@ -144,6 +144,7 @@ Grid.prototype.analyzeClick = function(clickedRow, clickedCol) {
       current = 0;
     }
   }
+  if (current > 0) { consecutive.push(current); }
   var consecutiveIdx = 0;
   for (var j = this.rowHintHeight - rowHint.length; j < this.rowHintHeight; j++) {
     row[j].className = "hint"; // reset
@@ -169,6 +170,7 @@ Grid.prototype.analyzeClick = function(clickedRow, clickedCol) {
       current = 0;
     }
   }
+  if (current > 0) { consecutive.push(current); }
   var consecutiveIdx = 0;
   for (var i = this.colHintHeight - colHint.length; i < this.colHintHeight; i++) {
     rows[i].childNodes[clickedCol].className = "hint"; // reset
