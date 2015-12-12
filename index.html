@@ -14,7 +14,8 @@
     <style type="text/css">
       body {
         font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
+        margin-left: 50px;
       }
 
       a:link, a:visited {
@@ -26,8 +27,21 @@
         color: #0099BB;
       }
 
+      .container {
+        max-width: 800px;
+        margin: 20px 0;
+      }
+
       .shaded {
         background-color: #333333;
+      }
+
+      .white {
+        background-color: #FFFFFF;
+      }
+
+      .question {
+        background-color: #FFE4B2;
       }
 
       .checked {
@@ -49,18 +63,23 @@
         padding: 0;
         text-align: center;
         vertical-align: middle;
+        background-color: #DDDDDD;
       }
 
       .hint {
         border: 1px solid #FFF;
         text-align: center;
+        background-color: #FFF;
       }
     </style>
   </head>
   <body>
-    <p>Can you solve GCHQ's Christmas 2015 Card Puzzle? Read more at <a href="http://www.bbc.com/news/uk-35058761">http://www.bbc.com/news/uk-35058761</a>!</p>
-    <p>Thanks for trying it out, please create a pull request or issue if there are any issues or bugs at <a href="https://github.com/richardhsu/gchq-christmas-2015">https://github.com/richardhsu/gchq-christmas-2015</a>!</p>
-    <p>Have fun and Merry Christmas and Happy Holidays!</p>
-    <br />
+    <div class="container">
+      <p>Can you solve GCHQ's Christmas 2015 Card Puzzle? Read more at <a href="http://www.gchq.gov.uk/press_and_media/news_and_features/Pages/Directors-Christmas-puzzle-2015.aspx">http://www.gchq.gov.uk/press_and_media/news_and_features/Pages/Directors-Christmas-puzzle-2015.aspx</a> and <a href="http://www.bbc.com/news/uk-35058761">http://www.bbc.com/news/uk-35058761</a>!</p>
+      <p>Thanks for trying it out, please create a pull request or issue if there are any issues or bugs at <a href="https://github.com/richardhsu/gchq-christmas-2015">https://github.com/richardhsu/gchq-christmas-2015</a>!</p>
+      <p>Have fun and Merry Christmas and Happy Holidays!</p>
+      <p><em>In this type of grid-shading puzzle, each square is either black or white. Some of the black squares have already been filled in for you. Each row or column is labelled with a string of numbers. The numbers indicate the length of all consecutive runs of black squares, and are displayed in the order that the runs appear in that line. For example, a label "2 1 6" indicates sets of two, one and six black squares, each of which will have at least one white square separating them.</em></p>
+      <p>This site provides you with 3 options, shaded (black), white (white), and question mark (orange) which cycle through when you click, the numbers will highlight in the row or column if you've fulfilled the consecutive block sets but you must get them in order so if it's 2, 5, 1. The 5 will not highlight until a set of 2 is found first.</p>
+    </div>
   </body>
 </html>

@@ -106,7 +106,17 @@ Grid.prototype.generateTable = function() {
           // Can toggle
           var obj = this;
           td.addEventListener("click", function() {
-            this.className = (this.className === "shaded") ? "" : "shaded";
+            this.innerHTML = "";
+            if (this.className === "") {
+              this.className = "shaded";
+            } else if (this.className === "shaded") {
+              this.className = "white";
+            } else if (this.className === "white") {
+              this.className = "question";
+              this.innerHTML = "?";
+            } else {
+              this.className = "";
+            }
             obj.analyzeClick(this.dataset.row, this.dataset.col);
           });
         }
